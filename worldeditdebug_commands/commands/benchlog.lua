@@ -5,7 +5,7 @@
 -- ██████  ███████ ██   ████  ██████ ██   ██ ███████  ██████   ██████
 local wed = worldeditdebug
 worldedit.register_command("benchlog", {
-	params = "[<reps>] <code>",
+	params = "<reps> <code>",
 	description = "Runs input code 1 or more times and logs the time it took.",
 	privs = {debug=true,worldedit=true},
 	require_pos = 0,
