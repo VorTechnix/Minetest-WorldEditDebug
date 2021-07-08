@@ -26,7 +26,7 @@ Examples:
 ## `bpreg <string> [(un)register]`
 Short for _break point register_. Registers breakpoints for testing `//debug`.
 
-**Note:** When you use WorldEditDebug breakpoints in your code ***always*** [register them in your code](https://github.com/VorTechnix/Minetest-WorldEditDebug/blob/main/README.md#how-to-use) and ***NOT*** using ``//bpreg` as doing so is bad practice especially in multi-player/multi-tester environments.
+**Note:** When you use WorldEditDebug breakpoints in your code ***always*** [register them in your code](https://github.com/VorTechnix/Minetest-WorldEditDebug/blob/main/README.md#how-to-use) and ***NOT*** using `//bpreg` as doing so is bad practice especially in multi-player/multi-tester environments.
 
 Examples:
 
