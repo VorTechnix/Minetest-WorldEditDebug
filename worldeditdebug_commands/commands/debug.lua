@@ -15,9 +15,8 @@ worldedit.register_command("debug", {
 		local modeSet = {on=true,off=true}
 		if p[2] and not modeSet[p[2]] then
 			return false, "Error: Unknown argument \""..p[2].."\". Expected \"<string> [on|off]\""
-		else
-			if not p[2] or p[2] == "on" then p[2] = true
-			else p[2] = false end
+		elseif not p[2] then
+			p[2] = "on"
 		end
 		return true, p[1], p[2]
 	end,
@@ -25,7 +24,11 @@ worldedit.register_command("debug", {
 		if not wed.debug[switch] then
 			return false, "WorldEditDebug: break point \""..switch.."\" is not registered"
 		end
-		wed.debug[switch][name] = state
+		if state == "off" then
+			wed.debug[switch][name] = false
+		else
+			wed.debug[switch][name] = true
+		end
 		
 		return true, "WorldEditDebug: break point \""..switch.."\" is set to \""..state.."\" for "..name
 	end,
