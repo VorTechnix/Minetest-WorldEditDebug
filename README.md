@@ -16,10 +16,12 @@ The `//debug <break-var>` command is designed for debugging chat commands both f
 
 ```lua
 if worldeditdebug.debug[<break-var>][name] then
-    local tbl = {}
-    -- Do stuff
-    -- Add values and their names to tbl or set it equal to a vector
-	return false, "Values = " .. worldeditdebug.table_tostring(tbl)
+  -- Reminder and quick access for comand:
+  -- //debug <break-var> -- Replace <break-var> with your variable name
+  local tbl = {}
+  -- Do stuff
+  -- Add values and their names to tbl or set it equal to a vector
+  return false, "Values = " .. worldeditdebug.table_tostring(tbl)
 end
 ```
 
@@ -51,20 +53,20 @@ worldeditdebug.register("evalcheck")
 
 -- Beginning of chat register function...
 func = function(name, oper, mode, targ, base)
-	-- Code Body...
-	
-	-- Test:
-	if worldeditdebug.debug["evalcheck"][name] then
-		local brk = ""
-		for k,v in pairs(targ) do
-			brk = brk..k..": "..delta[k]..", "
-			delta[k] = eval(delta[k])
-			brk = brk..k..": "..delta[k]..", "
-		end
-		return false, brk
-	end
-	
-	-- More code...
-	
+  -- Code Body...
+  
+  -- Test:
+  if worldeditdebug.debug["evalcheck"][name] then
+    local brk = ""
+    for k,v in pairs(targ) do
+      brk = brk..k..": "..delta[k]..", "
+      delta[k] = eval(delta[k])
+      brk = brk..k..": "..delta[k]..", "
+    end
+    return false, brk
+  end
+  
+  -- More code...
+  
 end
 ```
