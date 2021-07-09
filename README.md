@@ -25,7 +25,7 @@ end
 
 Replace `<break-var>` with whatever name you want to assign to that break point.
 
-2. Insert the following code at the top of main function of the chat register function:
+2. Insert the following code at the top of file in which the chat register function is contained (or anywhere outside the chat register function):
 
 ```lua
 worldeditdebug.register({<break-var1>,<break-var2>,...})
@@ -46,11 +46,13 @@ The `worldeditdebug.register` function accepts tables or strings.
 The following code block is an example (for this one we make the return string as we go instead of using a table):
 
 ```lua
+-- At top of file:
+worldeditdebug.register("evalcheck")
+
+-- Beginning of chat register function...
 func = function(name, oper, mode, targ, base)
-	-- Locals initialized...
-	worldeditdebug.register("evalcheck")
-	
 	-- Code Body...
+	
 	-- Test:
 	if worldeditdebug.debug["evalcheck"][name] then
 		local brk = ""
