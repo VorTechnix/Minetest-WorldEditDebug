@@ -3,6 +3,10 @@ Hey, I remembered to make a changelog! (Now let's see if I remember to update it
 
 This will be the main changelog for WorldEditDebug.
 
+## v0.2: The Second Beta Release! (unknown)
+
+ - Created `//posdump`
+
 ## v0.1: The First Beta Release! (8th July 2021)
 
  - Created initial chat commands: `//benchmark`, `//benchlog` (outputs benchmark results to text file), `//bpreg` (_break point register_), `//debug`, `//log`

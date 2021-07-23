@@ -40,3 +40,20 @@ function worldeditdebug.split(str, sep)
   end
   return ret
 end
+
+--- v2s: Vector to string
+--
+-- Parameters:
+-- tbl (table) - input table
+-- plain (bool) - leave off axis names from result
+-- dlm (string) - seperator for result (default ", ")
+--
+-- Return: (string) - vector string
+function worldeditdebug.v2s(tbl,plain,dlm)
+	if not dlm then dlm = ", " end
+	if plain then
+		return tbl.x..dlm..tbl.y..dlm..tbl.z
+	else
+		return "X: "..tbl.x..dlm.."Y: "..tbl.y..dlm.."Z: "..tbl.z
+	end
+end

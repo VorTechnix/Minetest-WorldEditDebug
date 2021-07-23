@@ -4,7 +4,7 @@ This is the full chat command reference for WorldEditDebug.
 
 Before we begin here are some useful links:
 
- - [WorldEditAdditions Chat Command Reference](https://github.com/sbrl/Minetest-WorldEditAdditions/blob/main/Chat-Command-Reference.md) 
+ - [WorldEditAdditions Chat Command Reference](https://github.com/sbrl/Minetest-WorldEditAdditions/blob/main/Chat-Command-Reference.md)
  - [WorldEdit Chat Command Reference](https://github.com/Uberi/Minetest-WorldEdit/blob/master/ChatCommands.md)
 
 **Note:** If anything in this reference isn't clear, that's a bug. Please [open an issue](https://github.com/VorTechnix/Minetest-WorldEditDebug/issues) (or even better a PR improving it) to let me know precisely which bit you don't understand and why.
@@ -39,7 +39,7 @@ Examples:
 
 ## `//benchmark <reps> <code>`
 
-Executes `<code>` string `<reps>` times and tells you how long it took to do so. 
+Executes `<code>` string `<reps>` times and tells you how long it took to do so.
 
 Note: I recommend using a value of at least 1000 for `<reps>` as anything less will usually (unless it's very complicated code) execute in fractions of a millisecond which won't give you a very accurate result when you calculate the average time per execution.
 
@@ -69,4 +69,13 @@ Examples:
 ```
 //log Hello Internet! Welcome to Game Theory!
 //log Today I'm going to program!
+```
+
+## `//posdump`
+Alias: `//pd`. Writes current worldedit selection positions to wed_debug.log formatted as `//fixedpos set` commands.
+
+Examples:
+
+```
+//posdump
 ```
