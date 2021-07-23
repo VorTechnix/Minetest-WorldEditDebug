@@ -12,7 +12,9 @@ For details and a full list of commands see [Chat-Command-Reference.md](https://
 
 The `//debug <break-var>` command is designed for debugging chat commands both for the WorldEdit mod family and for main Minetest. To integrate debugging into a chat command simply follow these steps:
 
-1. Insert the following code into the main function of the chat register function at the line where you want to stop the function and check things:
+1. Add `worldeditdebug` as an optional dependency to your mod.
+
+2. Insert the following code into the main function of the chat register function at the line where you want to stop the function and check things:
 
 ```lua
 if worldeditdebug.debug[<break-var>][name] then
@@ -27,7 +29,7 @@ end
 
 Replace `<break-var>` with whatever name you want to assign to that break point.
 
-2. Insert the following code at the top of file in which the chat register function is contained (or anywhere outside the chat register function):
+3. Insert the following code at the top of file in which the chat register function is contained (or anywhere outside the chat register function):
 
 ```lua
 worldeditdebug.register({<break-var1>,<break-var2>,...})
@@ -41,7 +43,7 @@ worldeditdebug.register(<break-var1>)
 
 The `worldeditdebug.register` function accepts tables or strings.
 
-3. Once you start Minetest type `//debug <break-var>` into the chat (remembering to replace `<break-var>` with the actual breakpoint name). Then run the chat command you want to debug and it will print the values you added to `tbl` in step 1 to the chat.
+4. Once you start Minetest type `//debug <break-var>` into the chat (remembering to replace `<break-var>` with the actual breakpoint name). Then run the chat command you want to debug and it will print the values you added to `tbl` in step 1 to the chat.
 
 ## Example
 
