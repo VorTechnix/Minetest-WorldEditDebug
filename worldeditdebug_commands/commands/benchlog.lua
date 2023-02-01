@@ -16,7 +16,7 @@ worldedit.register_command("benchlog", {
 	func = function(name, reps, code)
 		local _, result = wed.benchmark(code, tonumber(reps))
 		wed.log(result)
-		return true, "Benchmark complete. Saved result to <worldname>/debug/wed_debug.log"
+		return true, "Benchmark complete. Saved result to worlds/"..minetest.get_worldpath():match("([^\\]+)$").."/debug/wed_debug.log"
 	end,
 })
 
