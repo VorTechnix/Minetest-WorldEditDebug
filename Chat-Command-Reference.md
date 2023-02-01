@@ -71,6 +71,15 @@ Examples:
 //log Today I'm going to program!
 ```
 
+## `//modlist`
+Alias: `//ml`. Writes the list of enabled mods to wed_debug.log.
+
+Examples:
+
+```
+//modlist
+```
+
 ## `//posdump`
 Alias: `//pd`. Writes current worldedit selection positions to wed_debug.log formatted as `//fixedpos set` commands.
 
